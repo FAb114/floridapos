@@ -1,0 +1,72 @@
+{
+  "name": "florida-burgers-pos",
+  "version": "2.0.0",
+  "private": true,
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "dev:electron": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "build": "vite build",
+    "build:win": "npm run build && electron-builder --win nsis",
+    "build:mac": "npm run build && electron-builder --mac",
+    "build:linux": "npm run build && electron-builder --linux",
+    "preview": "vite preview",
+    "build:win:portable": "npm run build && electron-builder --win portable"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.383.0",
+    "xlsx": "^0.18.5",
+    "electron-store": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "vite": "^5.0.0",
+    "electron": "^29.0.0",
+    "electron-builder": "^24.0.0",
+    "concurrently": "^8.2.0",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.floridaburgers.pos",
+    "productName": "Florida Burgers POS",
+    "copyright": "Florida Burgers 2025",
+    "asar": true,
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "portable": {
+      "artifactName": "FloridaBurgersPOS-portable.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Florida Burgers POS",
+      "perMachine": false
+    },
+    "forceCodeSigning": false
+  },
+  "description": "Sistema POS para hamburgueseria Florida Burgers",
+  "author": "Florida Burgers"
+}

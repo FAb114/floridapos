@@ -1,0 +1,36 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0a0a0a;
+  --bg2: #141414;
+  --bg3: #1e1e1e;
+  --bg4: #2a2a2a;
+  --orange: #f5820d;
+  --orange2: #e06b00;
+  --yellow: #f5c518;
+  --green: #2d6a2d;
+  --red: #c0392b;
+  --text: #f0f0f0;
+  --text2: #aaa;
+  --border: #333;
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button { cursor: pointer; border: none; font-family: 'Nunito', sans-serif; }
+input, textarea, select { font-family: 'Nunito', sans-serif; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--orange); }
+
+.bebas { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.04em; }
