@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import POSView from './components/POSView.jsx';
 import ConfigView from './components/ConfigView.jsx';
 import HistoryView from './components/HistoryView.jsx';
-import KitchenView from './components/KitchenView.jsx'; //
+import KitchenView from './components/KitchenView.jsx';
 import StatsView from './components/StatsView.jsx';
 import { loadMenu, saveMenu, defaultMenu } from './data/menu.js';
 import { storageGet, storageSet } from './data/storage.js';
@@ -123,7 +123,7 @@ export default function App() {
       )}
       {view === 'history' && <HistoryView onBack={() => setView('pos')} />}
       {view === 'stats' && <StatsView onBack={() => setView('pos')} />}
-      {view === 'kitchen' && <KitchenView onBack={() => setView('pos')} />} //
+      {view === 'kitchen' && <KitchenView onBack={() => setView('pos')} />}
 
       {showPinModal && (
         <div style={{

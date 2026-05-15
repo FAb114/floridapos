@@ -4,7 +4,7 @@ import ProductGrid from './ProductGrid.jsx';
 import { saveOrder } from '../data/orders.js';
 import TicketPreview from './TicketPreview.jsx';
 
-export default function POSView({ menu, onConfigClick, onHistoryClick, onStatsClick, nextOrderNumber }) {
+export default function POSView({ menu, onConfigClick, onHistoryClick, onStatsClick, onKitchenClick, nextOrderNumber }) {
   const [activeCategory, setActiveCategory] = useState(menu.categories[0]?.id);
   const [cart, setCart] = useState([]);
   const [orderNote, setOrderNote] = useState('');
