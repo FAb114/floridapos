@@ -5,6 +5,8 @@
 *.env
 # Nunca subas tus contraseñas o API keys
 
+dist-electron/
+
 # --- Dependencias ---
 node_modules/
 jspm_packages/
