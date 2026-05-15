@@ -178,6 +178,7 @@ export default function POSView({ menu, onConfigClick, onHistoryClick, onStatsCl
 
         {[
           { icon: '⛶', label: kioskMode ? 'Salir' : 'Kiosco', action: toggleKiosk },
+          { icon: '👨‍🍳', label: 'Cocina', action: onKitchenClick },
           { icon: '📋', label: 'Historial', action: onHistoryClick },
           { icon: '📊', label: 'Stats', action: onStatsClick },
           { icon: '⚙️', label: 'Config', action: onConfigClick },

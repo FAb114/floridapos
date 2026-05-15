@@ -41,10 +41,12 @@
     "files": [
       "dist/**/*",
       "electron/**/*",
+      "assets/**/*",
       "node_modules/**/*",
       "package.json"
     ],
     "win": {
+      "icon": "assets/icon.ico",
       "target": [
         {
           "target": "nsis",

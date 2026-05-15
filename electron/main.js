@@ -34,6 +34,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1280,
     height: 800,
+    icon: path.join(__dirname, '../assets/icon.ico'),
     minWidth: 1024,
     minHeight: 640,
     title: 'Florida Burgers POS',
